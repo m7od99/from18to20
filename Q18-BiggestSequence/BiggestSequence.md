@@ -17,7 +17,7 @@ output : indexes of biggest sequence .
 
 
 
-0- make list of tuples w(i ,j ,seq). where i and j >= 0 , i and j < inputs.size .
+0- list of tuples w(i ,j). where i and j >= 0 , i and j < inputs.size .
 
 0- x = inputs[i].
 
@@ -30,7 +30,7 @@ output : indexes of biggest sequence .
 - else ,for each constant i , j value will move when inputs[j] >= 0 will add the number to x  (x = x + inputs[j]) , seq = x . 
 
 
--if inputs[j] < 0 , we will start a new sequance for j (i = j+1) , x = inputs[j+1] , j++ .
+-if inputs[j] < 0 , we will start a new sequance for j (i = j) , x = 0 , j++ .
 
 
--at the end we will see biggest number in w(seq) and return W(i,j) for it .
+-at the end we will see biggest number in w and return W(i,j) for it .
