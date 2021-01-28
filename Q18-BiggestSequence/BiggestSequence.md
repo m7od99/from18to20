@@ -34,3 +34,74 @@ output : indexes of biggest sequence .
 
 
 -at the end we will see biggest number in w and return W(i,j) for it .
+
+
+*****************************************************************************************************************
+
+
+nlogn answer :
+
+
+
+
+
+part 1 : split
+
+
+
+
+1-pase case : when size of list = 1 return (0,0)
+
+
+2-splits the input to tow list left and right . 
+
+
+3-recursion left and right . 
+
+
+4-return merge left and right.(x,y) .
+
+
+
+part 2 : merge 
+
+
+
+(x,y)
+
+x= the start inedx .
+
+y= ending index .
+
+
+1- when left(x) = right(x):
+                   -if left[x] and right[x] >= 0 and left[y] and right [y] >=0 ,
+                    y = y+size of left then return (x,y). 
+
+                   -else return (x++,y++).
+
+
+
+
+2- when (right(x) + left.count-1) - left(y) =1: 
+                -count the value (x,y) for left and right .
+
+                -if right value is bigger , x= x + left.count , y = y+ left.count .
+
+                -else return left index .
+
+
+3- when (right(x) + left.count-1) - left(y) > 1 : 
+                -make another list that take after left(y) and before right(x).
+
+                -count the value for each list and return the index of bigger value like step 2 . 
+
+
+
+***************************************************************************************************
+
+
+
+
+
+

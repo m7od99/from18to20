@@ -18,29 +18,26 @@ namespace from18to20 {
             var i = 0;
             var j = 0;
             while (numbers.Count > i) {
-                while (numbers.Count > j)
-                {
-                    if (numbers[j] >=0)
-                    {
+                while (numbers.Count > j) {
+                    if (numbers[j] >= 0) {
                         x = x + numbers[j];
-                        w.Add((i,j), x);
+                        w.Add ((i, j), x);
                         j++;
                     }
                     //-if inputs[j] < 0 , we will start a new sequance for j (i = j) , x = 0 , j++ .
                     else {
                         j++;
-                        i=j;
-                        x =0;
+                        i = j;
+                        x = 0;
                         continue;
                     }
                 }
-                x=0;
+                x = 0;
                 i++;
             }
             // -at the end we will see biggest number in w and return W(i,j) for it .
             var max = w.Values.Max ();
-            var index = w.Where (o => o.Value == max).Select (o => o.Key).FirstOrDefault();
-
+            var index = w.Where (o => o.Value == max).Select (o => o.Key).FirstOrDefault ();
 
             return $"{index}, {max}";
         }
@@ -67,5 +64,22 @@ namespace from18to20 {
             return dd.ToString ();
         }
 
+        public static List<int> splitLeft (List<int> num, int mid) {
+            List<int> left = new List<int> ();
+            for (int i = 0; i < mid; i++) {
+                left.Add (num[i]);
+            }
+            return left;
+        }
+        public static List<int> SplitRight (List<int> num, int mid) {
+            List<int> right = new List<int> ();
+            mid = mid+1;
+            for (int k = mid; k < num.Count; k++) {
+                right.Add (num[k]);
+            }
+            return right;
+        }
+
+  
     }
 }
