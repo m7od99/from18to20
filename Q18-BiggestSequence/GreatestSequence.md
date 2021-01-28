@@ -1,4 +1,4 @@
-n log n answer for greetest sequnence . 
+n log n answer for greatest sequnence . 
 
 
 
