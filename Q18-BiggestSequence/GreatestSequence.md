@@ -1,9 +1,8 @@
-n log n answer for greatest sequnence . 
+n log n answer for greatest subsequnence . 
 
 
 
 input : list of numbers 
-
 
 output : index of greetest sequnence . 
 
@@ -13,58 +12,38 @@ part 1 : splits
 
 
 
-base case : if input == 1 return (0,0)
+1-base case : if size of input equels 1 return the indexs of it . 
+
+2-Initialize pivot that take midle value of input .
+
+3-Initialize two list :
+
+a-left take every elemnte from start of input to before pivot .
+
+b-right that takes elemnte after pivot to end .
+
+4-divide left and right to bace case , m1 the maxsubsequence for left , m2  the maxsubsequence for right . 
+
+5-combine left , right , pivot , m1 ,m2 .
 
 
 
-0- Initialize pivot that take midle value of input .
-
-
-0- Initialize two list :
-
-        -left take every elemnte from start of input to before pivot .
-
-        -right that takes elemnte after pivot to end .
-
-
--divide left and right to bace case . 
-
-
--merge left , right , pivot .
+part 2 : combine :
 
 
 
+6-Initialize list of tupls W to save the index and the value .
 
+7-create new list a3 , the start from m1 start index from left to m2 end index from right . 
 
-part 2 : merge :
+8-get m3 ,the  max subsequnence for a3 : 
 
+a- create 3 integer x equels m1 start index , y equels m1 end index +1 , value equels m1 value .
 
+b-from y index to end of a3 , if the element is positve will add to value and well increment y and add them to w . 
 
+c-otherwise start new subsequnence by make value equels the elemnte and y , x equels the index of it .
 
-0- Initialize 2 counter x , y set it at 0 . 
+d-the max value in w is m3 . 
 
-
-0-Initialize list of tupls W to save the index and the value .
-
-
-
-step 1: 
-
-    -if left[y] and pivot are positve increase counter y . save the sum in W(x,y).
-
-    -if left[y] is negative and pivot is positve incresase x and y . else return x,y . save the sum in W(x,y).
-
-
-
-step 2: 
-
-    -if right have elementes for each elemente in right : 
-
-        1-if the elemente is positve incresase y and seve the sum in W(x,y).
-
-        2-if the elemente is negative incresase x and y and seve the sum in W(x,y).
-
-
-step 3 : 
-
-    - return index of biggest value in w .
+9-return the max value from m1, m2, m3 . 
