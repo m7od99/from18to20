@@ -64,7 +64,7 @@ namespace from18to20 {
             return dd.ToString ();
         }
 
-        public static List<int> splitLeft (List<int> num, int mid) {
+        public static List<int> SplitLeft (List<int> num, int mid) {
             List<int> left = new List<int> ();
             for (int i = 0; i < mid; i++) {
                 left.Add (num[i]);
@@ -79,28 +79,6 @@ namespace from18to20 {
             }
             return right;
         }
-
-        public static (int,int) GreatestSequence(List<int> numbers)
-        {
-            //base case 
-
-            //splits to left , right , pivot 
-
-            //divide 
-
-        }
-
-        public static (int,int) Merge(List<int> left , List<int> right , int pivot)
-        {
-            // x , y and w 
-
-            // setp 1 : left and pivot 
-
-            // setp 2 : pivot and right 
-
-            //setp 3 : return index of max value in w . 
-        }
-
   
     }
 }

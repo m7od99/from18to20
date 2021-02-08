@@ -47,3 +47,18 @@ c-otherwise start new subsequnence by make value equels the elemnte and y , x eq
 d-the max value in w is m3 . 
 
 9-return the max value from m1, m2, m3 . 
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+*************************************************************************************
+
+
+2-why this will work ? : 
+
+-at base level we will have one number with his index in list , the left is sloved in m1 so we need to solve the sub list after m1 ,
+that will lead us to a3 the sublist include the right with pivot the elemnte we slove a3 iterate to get max subsequance , at the end we will compere the 3 max subsequence and return the biggest from them . 
+
+
+3-T(n) = 2T(n/2) + O(n) // n log n .
